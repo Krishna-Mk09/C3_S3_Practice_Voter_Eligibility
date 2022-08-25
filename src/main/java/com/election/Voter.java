@@ -9,4 +9,6 @@
 package com.election;
 
 public class Voter {
+    private String name;
+    private int age;
 }
