@@ -16,5 +16,8 @@ public class Voter {
     public Voter() {
     }
 
-
+    public Voter(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
