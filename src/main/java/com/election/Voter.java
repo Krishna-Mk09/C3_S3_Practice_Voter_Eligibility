@@ -16,10 +16,7 @@ public class Voter {
     public Voter() {
     }
 
-    public Voter(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+
 
     public String getName() {
         return name;
@@ -37,17 +34,18 @@ public class Voter {
         this.age = age;
     }
 
-    public int getAgeCriteria(int age) {
-        if (age >= 18) {
-            System.out.println(this.name + "Is Eligible to vote");
-            if (age == 0 || age < 18) {
-                System.out.println(this.name + "is not eligible to vote");
-            } else {
-                System.out.println("age cannot be negative");
-            }
+    public String getAgeCriteria(int age) {
+
+        if (age >= VOTER_ELIGIBLE_AGE) {
+            return this.name + " Is Eligible to vote";
         }
-        return age;
+        if (age > 0 && age < VOTER_ELIGIBLE_AGE) {
+            return this.name + " is not eligible to vote";
+        } else {
+            return "Age cannot be Negative and Zero";
+        }
     }
-
-
 }
+
+
+
