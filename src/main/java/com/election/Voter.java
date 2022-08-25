@@ -34,6 +34,15 @@ public class Voter {
         this.age = age;
     }
 
+    /**
+     * If the age is greater than or equal to 18, return the name of the person and a message saying that they are eligible
+     * to vote. If the age is greater than 0 and less than 18, return the name of the person and a message saying that they
+     * are not eligible to vote. If the age is less than or equal to 0, return a message saying that the age cannot be
+     * negative or zero
+     *
+     * @param age The age of the voter
+     * @return String
+     */
     public String getAgeCriteria(int age) {
 
         if (age >= VOTER_ELIGIBLE_AGE) {
