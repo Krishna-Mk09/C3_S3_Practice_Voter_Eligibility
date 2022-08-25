@@ -36,4 +36,19 @@ public class Voter {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public int getAgeCriteria(int age) {
+        if (age >= 18) {
+            System.out.println(this.name + "Is Eligible to vote");
+            if (age == 0 || age < 18) {
+                System.out.println(this.name + "is not eligible to vote");
+            } else {
+                System.out.println("age cannot be negative");
+            }
+        }
+        return age;
+    }
+
+
+}
 }
